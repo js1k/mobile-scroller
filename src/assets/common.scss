@@ -1,0 +1,237 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+html {
+  text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+//消除VW布局对img样式影响
+img {
+  content: normal !important;
+}
+* {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+//   max-height: 100%;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -webkit-user-drag: none;
+  -ms-content-zooming: none;
+  touch-action: manipulation;
+  word-wrap: break-word;
+  -webkit-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  text-size-adjust: none;
+  user-select: text;
+  -webkit-overflow-scrolling: touch;
+}
+.flx {
+  display: flex;
+}
+.flx-ce-ce {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flx-ce-sta {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.flx-ce-end {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.flx-ce-bet {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.flx-start {
+  display: flex;
+  align-items: flex-start;
+}
+.flx-clm {
+  display: flex;
+  flex-direction: column;
+}
+.flx-clm-start {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.flx-clm-ce {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.relative {
+  position: relative;
+}
+.re-right-line {
+  position: relative;
+}
+.re-right-line:after {
+  display: block;
+  height:100%;
+  content: " ";
+  position: absolute;
+  right: 0;
+  top: 0;
+  border-right: 1px solid rgba(221, 221, 221, 1);
+  transform: scaleX(0.5);
+}
+.re-after-line {
+  position: relative;
+}
+.re-after-line:after {
+  display: block;
+  width: 100%;
+  content: " ";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border-bottom: 1px solid rgba(221, 221, 221, 1);
+  transform: scaleY(0.5);
+}
+.re-before-line {
+  position: relative;
+}
+.re-before-line:after {
+  display: block;
+  width: 100%;
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-bottom: 1px solid rgba(221, 221, 221, 1);
+  transform: scaleY(0.5);
+}
+// vux
+
+.weui-cells:before {
+  display: none !important;
+}
+
+.vux-popup-header-right,
+.weui-dialog__btn_primary {
+  color: #4080ca !important;
+}
+
+.scroller-item {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 0 10px;
+}
+
+// vux-button-group 样式
+
+.vux-button-group {
+  padding: 20px 15px;
+  & > a.vux-button-tab-item-first:after,
+  & > a.vux-button-tab-item-middle:after,
+  & > a.vux-button-tab-item-last:after {
+    border: 1px solid #2482fc !important;
+  }
+
+  a.vux-button-tab-item-first {
+    border-top-left-radius: 4px !important;
+    border-bottom-left-radius: 4px !important;
+
+    &:after {
+      border-top-left-radius: 4px !important;
+      border-bottom-left-radius: 4px !important;
+    }
+  }
+
+  a.vux-button-tab-item-last {
+    border-top-right-radius: 4px !important;
+    border-bottom-right-radius: 4px !important;
+
+    &:after {
+      border-top-right-radius: 4px !important;
+      border-bottom-right-radius: 4px !important;
+    }
+  }
+
+  a.vux-button-group-current {
+    background: #2482fc !important;
+  }
+}
+
+.vux-loading {
+  z-index: 9999 !important;
+}
+
+.weui-dialog {
+  z-index: 99999 !important;
+}
+.weui-toast{
+    z-index: 9999 !important;
+}
+
+// jsc 组件库 样式 
+.jsc-com-btn{
+    padding:0 30px 20px;
+}
+.line-card{
+    width:100%;
+    height:528px;
+    background:#fff;
+    margin-bottom:20px;
+    .echarts-trend {
+        height: 528px;
+    }
+}
+.jsc-group-label-btn{
+    font-size:24px;
+    div{
+        border-radius:8px;
+        color:#333333;
+        background:rgba(245,245,245,1);
+        padding:6px 18px;
+        margin-right:4px;
+        font-size:24px;
+        font-weight: none;
+    }
+    div:last-of-type{
+        margin-right:0;
+    }
+    .active-line-tab{
+        color:#2482FC;
+        background:rgba(212,231,254,1);
+    }
+}
+.vux-sticky,.vux-sticky-box{
+    z-index: 9!important;
+}
+.link-content {
+  color: #0066cc !important;
+}
+.effice-red{
+    color:#F35252 !important;
+}
+.effice-gree{
+    color:#3BB950 !important;
+}
+
+
+// 固定元素
+// 历史数据 滚动固定
+.header-fixed{
+    position: sticky !important;
+    top:0;
+}
