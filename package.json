@@ -1,6 +1,6 @@
 {
-  "name": "del-jsc",
-  "version": "1.6.1",
+  "name": "del-jsc1",
+  "version": "5.0.0",
   "description": "jsc ui components",
   "author": "bww",
   "private": false,
@@ -14,7 +14,6 @@
     "build": "node build/build.js"
   },
   "devDependencies": {
-    "vue": "^2.5.2",
     "autoprefixer": "^7.1.2",
     "babel-core": "^6.22.1",
     "babel-helper-vue-jsx-merge-props": "^2.0.3",
@@ -27,6 +26,7 @@
     "chalk": "^2.0.1",
     "copy-webpack-plugin": "^4.0.1",
     "css-loader": "^0.28.0",
+    "cssnano-preset-advanced": "^4.0.7",
     "extract-text-webpack-plugin": "^3.0.0",
     "file-loader": "^1.1.4",
     "friendly-errors-webpack-plugin": "^1.6.1",
@@ -46,6 +46,7 @@
     "shelljs": "^0.7.6",
     "uglifyjs-webpack-plugin": "^1.1.1",
     "url-loader": "^0.5.8",
+    "vue": "^2.5.2",
     "vue-loader": "^13.3.0",
     "vue-style-loader": "^3.0.1",
     "vue-template-compiler": "^2.5.2",
@@ -62,5 +63,13 @@
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
-  ]
+  ],
+  "dependencies": {
+    "cssnano": "^4.1.10",
+    "postcss-aspect-ratio-mini": "^1.1.0",
+    "postcss-cssnext": "^3.1.0",
+    "postcss-px-to-viewport": "^1.1.1",
+    "postcss-viewport-units": "^0.1.6",
+    "postcss-write-svg": "^3.0.1"
+  }
 }

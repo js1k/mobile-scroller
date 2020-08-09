@@ -39,6 +39,7 @@
     </div>
 </template>
 <script>
+import '../../assets/common.scss'
 export default {
     name: 'jsc-btn',
     props: ['sepGrop', 'isSepret', 'value', 'type'],
