@@ -64,6 +64,7 @@ import merge from 'lodash.merge';
 import '../../assets/common.scss'
 
 export default {
+    
     name: 'jsc-yto-table',
     props: {
         // 表格数据

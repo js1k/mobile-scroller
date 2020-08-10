@@ -4,7 +4,7 @@
 
 ``` bash
 # install dependencies
-npm install del-jsc -save
+npm install yto-jsc -save
 
 # serve with hot reload at localhost:8080
 npm run dev

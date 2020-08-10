@@ -14,7 +14,7 @@ import merge from 'lodash.merge';
 import '../../assets/common.scss'
 
 export default {
-    name: 'jsc-v-echarts',
+    name: 'jsc-line-chart',
     components: {
         ECharts
     },
