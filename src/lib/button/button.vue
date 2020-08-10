@@ -1,9 +1,25 @@
 <template>
     <div class="jsc-button-group">
-        <div
-            class="seprate-bt flx-ce-sta"
-            v-if="type=='isSepret'"
-        >
+        <div class="seprate-bt flx-ce-sta"
+            v-if="type=='isSepret'">
+            <div v-for="(item,index) in sepGrop"
+                :key="index"
+                class="sep-item flx-ce-ce"
+                :class="{'active-sep':index==curIndex}"
+                @click="toggleTab(item,index)"
+            >{{item}}</div>
+        </div>
+        <div class="flx-ce-sta none-sep"
+            v-if="type=='noSepret'">
+            <div v-for="(item,index) in sepGrop"
+                :key="index"
+                class="sep-item flx-ce-ce"
+                :class="{'active-sep':index==curIndex}"
+                @click="toggleTab(item,index)"
+            >{{item}}</div>
+        </div>
+        <div class="scroll-btn-group flx-ce-bet"
+            v-if="type=='scrollX'">
             <div
                 v-for="(item,index) in sepGrop"
                 :key="index"
@@ -12,27 +28,12 @@
                 @click="toggleTab(item,index)"
             >{{item}}</div>
         </div>
-        <div
-            class="flx-ce-sta none-sep"
-            v-if="type=='noSepret'"
-        >
-            <div
+        <div class="flx-ce-bet re-after-line"
+            v-if="type=='titBt'">
+            <div class="tit-bt flx-ce-ce"
                 v-for="(item,index) in sepGrop"
                 :key="index"
-                class="sep-item flx-ce-ce"
-                :class="{'active-sep':index==curIndex}"
-                @click="toggleTab(item,index)"
-            >{{item}}</div>
-        </div>
-        <div
-            class="scroll-btn-group flx-ce-bet"
-            v-if="type=='scrollX'"
-        >
-            <div
-                v-for="(item,index) in sepGrop"
-                :key="index"
-                class="sep-item flx-ce-ce"
-                :class="{'active-sep':index==curIndex}"
+                :class="{'active-tit':index==curIndex}"
                 @click="toggleTab(item,index)"
             >{{item}}</div>
         </div>
@@ -70,6 +71,30 @@ export default {
 <style lang="scss" scoped>
 .jsc-button-group {
     width: 100%;
+    
+    .tit-bt{
+        flex:1;
+        height:80px;
+        font-size:28px;
+        font-family:PingFangSC-Regular,PingFang SC;
+        font-weight:400;
+        color:#666666;
+    }
+    .active-tit{
+        color:rgba(36,130,252,1);
+        position: relative;
+    }
+    .active-tit:after{
+        content: ' ';
+        position: absolute;
+        bottom:0;
+        transform: translateX(-50%);
+        left:50%;
+        width:40px;
+        height:4px;
+        background:rgba(36,130,252,1);
+        border-radius:2px;
+    }
     .seprate-bt {
         width: 100%;
         .sep-item {
