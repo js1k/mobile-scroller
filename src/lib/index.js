@@ -3,6 +3,7 @@ import grouplabel from './groupLabel/groupLabel.vue'
 import timeLabel from './timeLabel/timeLabel.vue'
 import VEcharts from './VEcharts/VEcharts.vue'
 import YtoTable from './YtoTable/YtoTable.vue'
+import scroller from './scroller/scroller.vue'
 const components = {
     btn,
     grouplabel
@@ -23,6 +24,7 @@ jsc.install = function (Vue) {
     Vue.component(timeLabel.name, timeLabel)
     Vue.component(VEcharts.name, VEcharts)
     Vue.component(YtoTable.name, YtoTable)
+    Vue.component(scroller.name, scroller)
 }
 
 export default jsc
