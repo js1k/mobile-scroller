@@ -1,7 +1,7 @@
 import btn from './button/button.vue'
 import grouplabel from './groupLabel/groupLabel.vue'
 import timeLabel from './timeLabel/timeLabel.vue'
-import VEcharts from './VEcharts/VEcharts.vue'
+// import VEcharts from './VEcharts/VEcharts.vue'
 import YtoTable from './YtoTable/YtoTable.vue'
 import scroller from './scroller/scroller.vue'
 const components = {
@@ -22,7 +22,7 @@ jsc.install = function (Vue) {
     Vue.component(btn.name, btn)
     Vue.component(grouplabel.name, grouplabel)
     Vue.component(timeLabel.name, timeLabel)
-    Vue.component(VEcharts.name, VEcharts)
+    // Vue.component(VEcharts.name, VEcharts)
     Vue.component(YtoTable.name, YtoTable)
     Vue.component(scroller.name, scroller)
 }
