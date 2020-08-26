@@ -275,8 +275,9 @@ export default {
                 }
             }
             let data = this.dateType === 'custom' ? [this.selectStart, this.selectEnd] : this.currentValue;
+            let clickPosition = this.dateType === 'custom' ? this.customActive : '';
             this.visible = false;
-            this.$emit('confirm', data);
+            this.$emit('confirm', data,clickPosition);
         }
     },
     computed: {

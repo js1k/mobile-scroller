@@ -80,8 +80,8 @@ export default {
             });
         },
         // 选择时间
-        confirmDate (val) {
-            this.$emit('confirmDate', val);
+        confirmDate (val,clickPosition) {
+             this.$emit('confirmDate', val, clickPosition);
             this.$refs['picker' + this.dateType].close();
         }
     }
