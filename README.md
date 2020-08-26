@@ -5,8 +5,10 @@
 ``` bash
 # install dependencies
 npm install yto-jsc -save
+```
 
 ### 组件列表
+
 | 组件名    | 标签名     | 参数        | 事件       |
 | :--------| :-----------| :----------| :---------|
 | 按钮组   | jsc-btn     | sepGrop: 按钮文案数组 <br> type: (按钮类型)isSepret,noSepret,scrollX,titBt <br> value:绑定值(下标) | toggleTab: 点击事件(item,index) |
