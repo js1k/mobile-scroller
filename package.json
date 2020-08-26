@@ -1,7 +1,7 @@
 {
   "name": "yto-jsc",
-  "version": "2.1.8",
-  "description": "btn style flx",
+  "version": "2.1.9",
+  "description": "修改日期控件",
   "author": "bww",
   "private": false,
   "repository": {
