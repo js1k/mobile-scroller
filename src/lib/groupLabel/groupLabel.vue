@@ -33,7 +33,7 @@
 <script>
 import '../../assets/common.scss'
 export default {
-    name: 'jsc-group-label',
+    name: 'jsc-label',
     props: ['search', 'fuzzyData'],
     data () {
         return {

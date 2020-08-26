@@ -60,12 +60,9 @@
 
 <script>
 import merge from 'lodash.merge';
-// import { Sticky } from 'vux';
 import '../../assets/common.scss'
-
 export default {
-    
-    name: 'jsc-yto-table',
+    name: 'jsc-table',
     props: {
         // 表格数据
         tableData: {
@@ -196,10 +193,6 @@ export default {
 .yto-table {
     width: 100%;
     font-size: 26px;
-    .sticky {
-        // position: sticky !important;
-        // top: 0;
-    }
     .yto-head {
         display: flex;
         color: #999;

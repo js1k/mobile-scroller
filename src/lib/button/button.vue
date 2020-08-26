@@ -71,7 +71,6 @@ export default {
 <style lang="scss" scoped>
 .jsc-button-group {
     width: 100%;
-    
     .tit-bt{
         flex:1;
         height:80px;
@@ -120,7 +119,7 @@ export default {
     .none-sep {
         width: 100%;
         .sep-item {
-            flex-grow: 1;
+            flex: 1;
             height: 68px;
             margin-right: 0;
             background: none;

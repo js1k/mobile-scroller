@@ -56,7 +56,7 @@
 import datePicker from '@/components/datePicker';
 import '../../assets/common.scss'
 export default {
-    name: 'jsc-time-label',
+    name: 'jsc-time',
     components: {
         datePicker
     },
