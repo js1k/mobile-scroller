@@ -93,6 +93,7 @@ export default {
         height:4px;
         background:rgba(36,130,252,1);
         border-radius:2px;
+        z-index: 999;
     }
     .seprate-bt {
         width: 100%;

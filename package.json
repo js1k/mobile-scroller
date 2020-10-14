@@ -1,7 +1,7 @@
 {
   "name": "yto-jsc",
-  "version": "2.1.9",
-  "description": "修改日期控件",
+  "version": "2.2.1",
+  "description": "tab组件z-index问题修复",
   "author": "bww",
   "private": false,
   "repository": {
