@@ -11,7 +11,6 @@
     </div>
 </template>
 <script>
-// import {throttle} from '../lib/utils.js';
 export default {
     name:'jsc-scroller',
     props: ['isLoading', 'hasMore', 'disabledScroll', 'nodate'],

@@ -1,42 +1,38 @@
 <template>
     <div class="yto-table">
-        <!-- <sticky class="sticky"> -->
-            <div class="yto-head">
-                <div v-for="(col, index) in columns_"
-                     class="yto-head-th"
-                     :key="index"
-                     @click="sortChange(col, index)">
-                    <div class="yto-head-title">
-                        <div class="head-txt">
-                            <span>{{ col.title }}{{(col.subTitle)}}</span>
-                            <!-- <span class="yto-head-sub-title">{{ col.subTitle }}</span> -->
-                            <span v-if="col.orderBy !== undefined && col.orderBy !== null"
-                                class="sort-wrap">
-                                    <!-- 升序 -->
-                                    <template v-if="col.orderBy == 'asc'">
-                                        <img src="../../assets/img/icon_sort_arr.png">
-                                        <img src="../../assets/img/icon_unsort_arr.png">
-                                    </template>
-                                    <!-- 降序 -->
-                                    <template v-else-if="col.orderBy == 'desc'">
-                                        <img src="../../assets/img/icon_unsort_arr.png"
-                                            class="sort-icon-reserve">
-                                        <img src="../../assets/img/icon_sort_arr.png"
-                                            class="sort-icon-reserve">
-                                    </template>
-                                    <!-- 无序 -->
-                                    <template v-else>
-                                        <img src="../../assets/img/icon_unsort_arr.png"
-                                            class="sort-icon-reserve">
-                                        <img src="../../assets/img/icon_unsort_arr.png">
-                                    </template>
-                            </span>
-                        </div>
+        <div class="yto-head">
+            <div v-for="(col, index) in columns_"
+                    class="yto-head-th"
+                    :key="index"
+                    @click="sortChange(col, index)">
+                <div class="yto-head-title">
+                    <div class="head-txt">
+                        <span>{{ col.title }}{{(col.subTitle)}}</span>
+                        <span v-if="col.orderBy !== undefined && col.orderBy !== null"
+                            class="sort-wrap">
+                                <!-- 升序 -->
+                                <template v-if="col.orderBy == 'asc'">
+                                    <img src="../../assets/img/icon_sort_arr.png">
+                                    <img src="../../assets/img/icon_unsort_arr.png">
+                                </template>
+                                <!-- 降序 -->
+                                <template v-else-if="col.orderBy == 'desc'">
+                                    <img src="../../assets/img/icon_unsort_arr.png"
+                                        class="sort-icon-reserve">
+                                    <img src="../../assets/img/icon_sort_arr.png"
+                                        class="sort-icon-reserve">
+                                </template>
+                                <!-- 无序 -->
+                                <template v-else>
+                                    <img src="../../assets/img/icon_unsort_arr.png"
+                                        class="sort-icon-reserve">
+                                    <img src="../../assets/img/icon_unsort_arr.png">
+                                </template>
+                        </span>
                     </div>
                 </div>
             </div>
-        <!-- </sticky> -->
-
+        </div>
         <template v-if="data && data.length">
             <div v-for="(row, index) in data"
                  class="yto-row"
@@ -96,9 +92,6 @@ export default {
             }
         }
     },
-    components: {
-        // Sticky
-    },
 
     data () {
         return {
@@ -122,7 +115,6 @@ export default {
                     field: item.field,
                     formatter: item.formatter,
                     filter: item.filter
-                    // ...item
                 };
             });
         }
@@ -131,7 +123,8 @@ export default {
         tableData: {
             handler (val) {
                 this.data = merge([], val);
-            }
+            },
+            deep:true
         }
     },
 
