@@ -4,14 +4,19 @@
 
 ``` bash
 # install dependencies
+
 npm install yto-jsc -save
 
 # 日期组件依赖于jsc
+
 故需要在html中引入如下资源
+
 <link rel="stylesheet" href="//jscapp.yto56.com.cn:8081/jscPackageApp/yto-package.css"/>
+
 <script type="text/javascript" src="//jscapp.yto56.com.cn:8081/jscPackageApp/yto-package.js"></script>
 
 本组件库已做适配，项目中不需要针对本组件库再次适配
+
 ```
 
 ### 组件列表
