@@ -119,38 +119,10 @@ body {
   border-bottom: 1px solid rgba(221, 221, 221, 1);
   transform: scaleY(0.5);
 }
-// vux
-
-.weui-cells:before {
-  display: none !important;
-}
-
-.vux-popup-header-right,
-.weui-dialog__btn_primary {
-  color: #4080ca !important;
-}
 
 .scroller-item {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   padding: 0 10px;
-}
-
-.link-content {
-  color: #0066cc !important;
-}
-.effice-red{
-    color:#F35252 !important;
-}
-.effice-gree{
-    color:#3BB950 !important;
-}
-
-
-// 固定元素
-// 历史数据 滚动固定
-.header-fixed{
-    position: sticky !important;
-    top:0;
 }

@@ -12,7 +12,7 @@
 </template>
 <script>
 export default {
-    name: 'jsc-scroller',
+    name: 'mob-scroller',
     // props: ['isLoading', 'hasMore', 'disabledScroll', 'nodate', 'threshold'],
     props: {
         'isLoading': {
