@@ -12,8 +12,30 @@
 </template>
 <script>
 export default {
-    name:'jsc-scroller',
-    props: ['isLoading', 'hasMore', 'disabledScroll', 'nodate'],
+    name: 'jsc-scroller',
+    // props: ['isLoading', 'hasMore', 'disabledScroll', 'nodate', 'threshold'],
+    props: {
+        'isLoading': {
+            type: Boolean,
+            default: false
+        },
+        'hasMore': {
+            type: Boolean,
+            default: true
+        },
+        'disabledScroll': {
+            type: Boolean,
+            default: false
+        },
+        'nodate': {
+            type: Boolean,
+            default: false
+        },
+        'threshold': {
+            type: Number,
+            default: 100
+        }
+    },
     data () {
         return {
             canScroll: true
@@ -26,15 +48,18 @@ export default {
         scrollLoad () {
             let _this = this;
             let el = this.$refs.scroll;
-            if (!this.hasMore) return;
-            if (el.scrollHeight - 100 < el.scrollTop + el.offsetHeight) {
-                if (!this.canScroll) return;
+            if(el.scrollTop + el.offsetHeight==el.scrollHeight){
+                el.scrollTop-=10
+            }
+            if (!this.hasMore||!this.canScroll) return;
+            if (el.scrollHeight - this.threshold < el.scrollTop + el.offsetHeight) {
                 this.canScroll = false;
                 this.$emit('scrollLoad');
+                el.scrollTop -= 100;
                 let tempT = setTimeout(function () {
                     _this.canScroll = true;
                     clearTimeout(tempT);
-                }, 1000);
+                }, 500);
             };
         }
     }

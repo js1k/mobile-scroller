@@ -1,7 +1,7 @@
 {
-  "name": "yto-jsc99",
-  "version": "2.2.3",
-  "description": "更换日期组件",
+  "name": "yto-jsc",
+  "version": "2.2.5",
+  "description": "修复scroll组件bug",
   "author": "bww",
   "private": false,
   "repository": {
