@@ -12,7 +12,7 @@
 </template>
 <script>
 export default {
-    name: 'mob-scroller',
+    name: 'jsc-scroller',
     // props: ['isLoading', 'hasMore', 'disabledScroll', 'nodate', 'threshold'],
     props: {
         'isLoading': {
@@ -33,7 +33,7 @@ export default {
         },
         'threshold': {
             type: Number,
-            default: 100
+            default: 20
         }
     },
     data () {
@@ -48,14 +48,17 @@ export default {
         scrollLoad () {
             let _this = this;
             let el = this.$refs.scroll;
-            if(el.scrollTop + el.offsetHeight==el.scrollHeight){
-                el.scrollTop-=10
+            if((el.scrollTop + el.offsetHeight==el.scrollHeight)&&this.hasMore){
+                el.scrollTop-=30
+                return
             }
             if (!this.hasMore||!this.canScroll) return;
             if (el.scrollHeight - this.threshold < el.scrollTop + el.offsetHeight) {
                 this.canScroll = false;
                 this.$emit('scrollLoad');
-                el.scrollTop -= 100;
+                if(this.hasMore){
+                    el.scrollTop-=30
+                }
                 let tempT = setTimeout(function () {
                     _this.canScroll = true;
                     clearTimeout(tempT);
