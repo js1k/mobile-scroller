@@ -1,6 +1,6 @@
 {
   "name": "mob-scroller",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "移动端滚动组件",
   "author": "bww",
   "private": false,
@@ -11,6 +11,16 @@
   "main": "dist/jsc.js",
   "files": [
     "dist"
+  ],
+  "keywords":[
+      "vue",
+      "scroll",
+      "scroller",
+      "mobile",
+      "移动端",
+      "无限滚动",
+      "滚动",
+      "滚动加载"
   ],
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
